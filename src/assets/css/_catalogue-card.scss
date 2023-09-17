@@ -1,0 +1,53 @@
+@import "./_variables";
+
+$card-height: 18rem;
+
+.catalogue-card {
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: #{$base-radius};
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px 0px;
+    min-height: #{$card-height};
+    max-height: #{$card-height};
+
+    .catalogue-card_header {
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        height: 10rem;
+        position: relative;
+
+        img.main {
+            height: 100%;
+            width: auto;
+            position: relative;
+        }
+
+        img.cover {
+            width: 100%;
+            position: absolute;
+            filter: blur(10rem);
+        }
+    }    
+
+    .catalogue-card_main {
+        padding: #{$base-spacing * 0.75}
+    }
+
+    &:hover {
+        .catalogue-card_main__title {
+            text-decoration: underline;
+        }    
+    }
+
+    .catalogue-card_main__title {
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+
+    .catalogue-card_main__price {
+        font-size: 1rem;
+
+        font-weight: 600;
+    }
+}

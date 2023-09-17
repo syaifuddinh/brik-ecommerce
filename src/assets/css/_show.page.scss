@@ -1,0 +1,63 @@
+@use "sass:map";
+@import "./_variables";                                                                                     
+
+$xs-size: map.get($breakpoints, "xs");
+$gray-color: gray;
+
+.show-container {
+     .heading {
+        display: flex;
+        gap: #{$base-spacing};
+        align-items: center;
+    }
+
+    .label {
+        font-size: 0.825rem;
+        font-weight: 600;
+        color: #{$gray-color};
+        margin-bottom: #{$base-spacing * 0.375};
+    }
+
+    .main {
+        display: flex;
+        gap: #{$base-spacing};
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        .main_thumbnail {
+            img {
+                height: 20rem;
+                width: auto;
+            }
+        }
+
+        .main_content {
+            display: flex;
+            flex-direction: column;
+            gap: #{$base-spacing * 0.75};
+
+            .main_content__title {
+                font-size: 1.25rem;
+                font-weight: 500;
+            }
+            .main_content__price {
+                font-size: 1.75rem;
+                font-weight: 600;
+            }
+
+            .col {
+                width: 8rem;
+            }
+
+            .row:last-child {
+                margin-top: #{$base-spacing};
+            }
+        }
+    }
+
+    @media only screen and (max-width: #{$xs-size}) {
+        .main {
+            flex-direction: column;
+        }        
+    }
+}

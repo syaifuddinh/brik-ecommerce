@@ -1,0 +1,44 @@
+@use "sass:map";
+@import "./_variables";
+
+$gap: $base-spacing * 0.5;
+$size: 2rem;
+$normal-color: black;
+$active-color: map.get($colors, "primary");
+
+
+.pagination {
+    display: flex;
+    gap: #{$gap};
+
+    .pagination_button {
+        min-width: #{$size};
+        min-height: #{$size};
+        max-width: #{$size};
+        max-height: #{$size};
+        border: 1px solid #{$normal-color};
+        color: #{$normal-color};
+        border-radius: #{$base-radius};
+        font-size: 0.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover {        
+            font-weight: 500;
+            border: 2px solid #{$normal-color};
+        }
+
+        &.active {
+            font-weight: 500;
+            color: #{$active-color};
+            border: 2px solid #{$active-color};
+        }
+
+        img {
+            height: 1.2rem;
+            width: auto;
+        }
+    }
+}

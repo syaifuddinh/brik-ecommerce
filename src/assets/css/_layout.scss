@@ -1,0 +1,71 @@
+@use "sass:map";
+@import "./_variables";
+
+$xs-size: map.get($breakpoints, "xs");
+$base-padding: $base-spacing ($base-spacing * 1.5);
+$navbar-color: #{map.get($colors, "primary")};
+$gray-color: #{map.get($colors, "gray")};
+
+.layout-container {
+    padding: #{$base-padding};
+}
+
+.row {
+    display: flex;
+    gap: #{$base-spacing}
+}
+
+.col {
+    width: calc(50% - #{$base-spacing * 0.5});
+    display: flex;
+    flex-direction: column;
+    gap: #{$base-spacing};
+}
+
+@media only screen and (max-width: #{$xs-size}) {
+    .row {
+        flex-direction: column;
+    }
+
+    .col {
+        width: 100%;
+    }
+}
+
+.navbar-container {
+    padding: #{$base-padding};
+    background: #{$navbar-color};
+    display: flex;
+    justify-content: flex-end;
+
+    .navbar-container_main {
+        display: flex;
+        gap: #{$base-spacing * 0.5};
+        font-weight: 500;
+        color: white;
+        align-items: center;
+
+        img {
+            height: 2rem;
+            width: auto;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+
+            &.disabled {
+                color: #{$gray-color};
+                cursor: not-allowed;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

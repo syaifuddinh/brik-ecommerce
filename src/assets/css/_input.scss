@@ -1,0 +1,79 @@
+@use "sass:map";
+@import "./_variables";
+
+$border-color: map.get($colors, "gray");
+
+.text-input-container {
+
+    textarea {
+        padding: #{$base-spacing * 0.5};
+        width: calc(100% - 1.2rem);
+        min-height: 12rem;
+        border: 1px solid #{$border-color};
+
+        &:active, &:focus {
+            outline: none;
+        }
+    }
+
+    .text-input-container_main {
+        overflow: hidden;
+        border: 1px solid #{$border-color};
+        border-radius: #{$base-radius};
+        display: flex;
+        align-items: center;
+    }
+
+    .text-input-container_right-decorator {
+        margin-left: #{$base-spacing * 0.25};
+        padding-right: #{$base-spacing * 0.6};
+        padding-top: #{$base-spacing * 0.2};
+    }
+
+    input[type="text"], input[type="password"] {
+        padding: #{$base-spacing * 0.75} #{$base-spacing};
+        border: none;
+
+        &:active, &:focus {
+            outline: none;
+        }
+    }
+
+
+}
+
+.file-container {
+    .file-container_image {
+        margin-bottom: #{$base-spacing * 0.5};
+
+        img {
+            height: 8rem;
+            width: auto;
+        }
+    }
+}
+
+body {
+    .css-13cymwt-control {
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+    }
+
+    .css-1jqq78o-placeholder {
+        font-size: 0.85rem;
+    }
+}
+
+.text-input-container_label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: #{$base-spacing * 0.5};
+    display: flex;
+    gap: #{$base-spacing * 0.25};
+    align-items: center;
+
+    .is-optional {
+        font-size: 0.65rem;
+        font-weight: 400;
+    }
+}

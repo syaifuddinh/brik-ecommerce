@@ -1,0 +1,30 @@
+@import "./_variables";
+
+.backward-button {
+    cursor: pointer;
+}
+
+.button {
+    cursor: pointer;
+    border-radius: #{$base-radius};
+    padding: #{$base-spacing * 1.5};
+    border: 0;
+    max-height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+
+    @each $colorName, $color in $colors {
+        &.#{$colorName} {
+            color: white;
+            background: #{$color};
+        }
+
+        &.disabled {
+            color: black;
+            cursor: not-allowed;
+            background: gray;
+        }
+    }
+}

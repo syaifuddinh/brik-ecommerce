@@ -1,0 +1,27 @@
+@import "./_variables";                                                                                     
+
+$desktop-size: calc(25% - #{$base-spacing});
+
+.header, .subheading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main {
+    margin-top: #{$base-spacing * 1.5};
+    display: flex;
+    flex-wrap: wrap;
+    gap: #{$base-spacing};
+
+    .main_col {
+        min-width: #{$desktop-size}; 
+        max-width: #{$desktop-size}; 
+    }
+}
+
+.footer {
+    display: flex;
+    margin-top: #{$base-spacing};
+    justify-content: flex-end;
+}

@@ -1,0 +1,47 @@
+@use "sass:map";
+@import "./_variables";
+
+.auth-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right bottom, #f5f7fa, #edf2f4, #e6eeed, #e2e8e4, #e0e2db);
+
+    .auth-container_main {
+        background: white;
+        padding: #{$base-spacing * 1.5};
+        width: calc(100% - 7.5rem);
+        max-width: 30rem;
+
+        .auth-container_main__title {
+            font-size: 1.75rem;
+            font-weight: 600;
+        }
+
+        .auth-container_main__content {
+            margin-top: #{$base-spacing};
+            display: flex;
+            flex-direction: column;
+            gap: #{$base-spacing * 0.75};
+        }
+    }
+
+    .auth-container_main__button {
+        margin-top: #{$base-spacing};
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .auth-container_main__info {
+        margin-top: #{$base-spacing};
+        display: flex;
+        justify-content: center;
+
+        a {
+            font-size: 0.75rem;
+        }
+    }
+}

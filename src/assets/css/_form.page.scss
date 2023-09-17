@@ -1,0 +1,25 @@
+@use "sass:map";
+@import "./_variables";                                                                                     
+
+.form-container {
+    .heading {
+        display: flex;
+        gap: #{$base-spacing};
+        align-items: center;
+    }
+
+    .main {
+        margin-top: #{$base-spacing};
+        margin-bottom: #{$base-spacing};
+    }
+
+    .footer {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .product-form {
+        
+
+    }
+}
