@@ -11,7 +11,7 @@
 
 ## User for login
 - username : admin
-- password : 12345
+- password : 12345678
 
 ## Technologies
 - Typescript
