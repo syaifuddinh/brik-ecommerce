@@ -9,6 +9,10 @@
 - After all installing procedures done, run : yarn dev
 - This application would run on : http://localhost:3000
 
+## User for login
+- username : admin
+- password : 12345
+
 ## Technologies
 - Typescript
 - React JS
